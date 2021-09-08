@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 10px;
+
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .form-control {
+            width: auto;
+        }
+
+        .btn {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .btn:hover {
+            opacity: .7;
+            color: #fff;
+        }
+
+        .btn-number {
+            background-color: #ffba49;
+        }
+
+        .btn-action {
+            background-color: #20a39e;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <h1>Калькулятор</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="window">
+            <div class="container">
+                <input type="text" class="col form-control" id="calculator" disabled>
+                <input type="text" class="col-3 form-control" id="answer" disabled>
+            </div>
+        </div>
+        <div class="action-bar">
+            <div class="container">
+                <button data-sign="/" class="btn btn-action col">/</button>
+                <button data-sign="*" class="btn btn-action col">*</button>
+                <button data-sign="=" class="btn btn-action col">=</button>
+            </div>
+            <div class="container">
+                <button data-sign="7" class="btn btn-number col">7</button>
+                <button data-sign="8" class="btn btn-number col">8</button>
+                <button data-sign="9" class="btn btn-number col">9</button>
+                <button data-sign="0" class="btn btn-number col">0</button>
+            </div>
+            <div class="container">
+                <button data-sign="4" class="btn btn-number col">4</button>
+                <button data-sign="5" class="btn btn-number col">5</button>
+                <button data-sign="6" class="btn btn-number col">6</button>
+                <button data-sign="+" class="btn btn-action col">+</button>
+            </div>
+            <div class="container">
+                <button data-sign="1" class="btn btn-number col">1</button>
+                <button data-sign="2" class="btn btn-number col">2</button>
+                <button data-sign="3" class="btn btn-number col">3</button>
+                <button data-sign="-" class="btn btn-action col">-</button>
+            </div>
+            <div class="container">
+                <button data-sign="sqrt(" class="btn btn-action col">sqrt</button>
+                <button data-sign="^" class="btn btn-action col">^</button>
+                <button data-sign="." class="btn btn-number col">.</button>
+            </div>
+            <div class="container">
+                <button data-sign="sin(" class="btn btn-action col">sin</button>
+                <button data-sign="cos(" class="btn btn-action col">cos</button>
+                <button data-sign="tg(" class="btn btn-action col">tg</button>
+                <button data-sign="ctg(" class="btn btn-action col">ctg</button>
+            </div>
+        </div>
+    </main>
+    <aside>
+        <div class="container flex-column">
+            <h2>История</h2>
+            <div id="historyContainer"></div>
+        </div>
+    </aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
