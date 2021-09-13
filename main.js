@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const answer = document.getElementById("answer");
 	const history = document.getElementById("historyContainer");
 
+
 	const Calculator = {
 		firstNum: null,
 		secondNum: null,
